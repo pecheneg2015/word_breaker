@@ -11,6 +11,13 @@ import { MainScene } from "./scenes/main-scene";
 const config: Phaser.Types.Core.GameConfig = {
   width: "100vw",
   height: "100vh",
+  physics: {
+    default: 'arcade',
+    arcade: {
+        gravity: { y: 300 },
+        debug: false
+    }
+},
   type: Phaser.AUTO,
   parent: "game",
   scene: MainScene

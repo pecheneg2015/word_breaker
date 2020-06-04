@@ -19,5 +19,11 @@ export class MainScene extends Phaser.Scene {
 
   create(): void {
     this.phaserSprite = this.add.sprite(400, 300, "myImage");
+    let gr = this.physics.add.group();
+    
+    let t = this.add.text(0, 0, 'Hello World', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' });
+    gr.add(t);
+    let r = this.physics.add.group(gr)
+r.setGravity(11,111)
   }
 }
